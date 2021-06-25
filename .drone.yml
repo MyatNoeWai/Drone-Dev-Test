@@ -6,10 +6,9 @@ name: default
 steps:
   - name: lint
     image: python:3.7-alpine
+    environment:
+    GOOS: linux
+    GOARCH: amd64
     commands:
       - python -m pip install -r requirements.txt
       - flake8
-
-environment:
-    GOOS: linux
-    GOARCH: amd64
