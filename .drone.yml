@@ -10,9 +10,6 @@ steps:
       - python -m pip install -r requirements.txt
       - flake8
 
-clone:
-  depth: 50
-  
-trigger:
-  branch:
-  - branch1
+environment:
+    GOOS: linux
+    GOARCH: amd64
